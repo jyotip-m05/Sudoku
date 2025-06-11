@@ -166,7 +166,7 @@ function endGame(won) {
   gameOver = true;
   clearInterval(timerInterval);
   if (won) {
-    resultDiv.textContent = `🎉 Congratulations! You solved it in ${formatTime(timer)}.`;
+    resultDiv.innerHTML = `🎉 Congratulations! You solved it in ${formatTime(timer)}.`;
     restartBtn.style.display = 'inline-block';
   }
 }
