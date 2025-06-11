@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width,initial-scale=1.0" />
+    <title>Sudoku Puzzle</title>
+    <link rel="shortcut icon" href="./img/sudoku.ico" type="image/x-icon" />
+    <link rel="stylesheet" href="./style.css" />
+  </head>
+
+  <body>
+    <div class="header">
+      <div class="title">
+        <img src="./img/sudoku.png" alt="logo" class="logo" />
+        <div class="name">Sudoku</div>
+      </div>
+    </div>
+    <div class="body">
+      <div class="game">
+        <div id="start-screen">
+          <button id="start-btn">Start Sudoku</button>
+        </div>
+        <div id="game-container" style="display:none;">
+          <div class="grid">
+            <form id="sudoku-form">
+              <div id="sudoku-grid"></div>
+              <div class="controls">
+                <button type="button" id="hint-btn">Hint (<span id="hint-count">5</span>)</button>
+                <button type="button" id="show-solution-btn">Show Solution</button>
+                <button type="button" id="restart-btn" style="display:none;">Restart</button>
+              </div>
+              <div class="result" id="result"></div>
+              <div class="stopwatch" id="stopwatch">00:00</div>
+            </form>
+          </div>
+        </div>
+      </div>
+    </div>
+  </body>
+  <script src="./script.js"></script>
+</html>

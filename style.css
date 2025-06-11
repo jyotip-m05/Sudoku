@@ -1,0 +1,151 @@
+body{
+  margin: 0;
+  overflow-y:auto;
+  min-width: 100vw;
+}
+.header {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: green;
+  margin: 0;
+  box-sizing: border-box;
+  position: fixed;
+  top : 0;
+  left : 0;
+  min-width: 100vw;
+}
+.title .logo,
+.title .name {
+  display: inline-block;
+}
+.logo {
+  height: 35px;
+}
+.name {
+  font-size: 2.5rem;
+}
+.grid {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 80px;
+}
+#sudoku-grid {
+  display: grid;
+  grid-template-columns: repeat(9, 2.5rem);
+  grid-template-rows: repeat(9, 2.5rem);
+  gap: 2px;
+  background: #222;
+  border: 3px solid #333;
+}
+.sudoku-cell {
+  width: 2.5rem;
+  height: 2.5rem;
+  text-align: center;
+  font-size: 1.5rem;
+  border: none;
+  outline: none;
+  background: #fff;
+  color: #222;
+  font-weight: bold;
+  transition: background 0.2s, color 0.2s;
+}
+.sudoku-cell:disabled {
+  background: #e0e0e0;
+  color: #888;
+}
+.sudoku-cell.wrong {
+  background: #ffb3b3;
+}
+.sudoku-cell:focus {
+  background: #d0f0ff;
+}
+#sudoku-grid .thick-bottom { border-bottom: 3px solid #333; }
+#sudoku-grid .thick-right { border-right: 3px solid #333; }
+#sudoku-grid .thick-left { border-left: 3px solid #333; }
+#sudoku-grid .thick-top { border-top: 3px solid #333; }
+.controls {
+  margin-top: 1rem;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1rem;
+  justify-content: center;
+  align-items: center;
+}
+.controls button {
+  font-size: 1rem;
+  padding: 0.5rem 1.2rem;
+  background: #388e3c;
+  color: #fff;
+  border: none;
+  border-radius: 0.5rem;
+  cursor: pointer;
+  transition: background 0.2s;
+}
+.controls button:hover,
+#start-btn:hover {
+  background: #2e7d32;
+}
+#restart-btn {
+  background: #1976d2;
+}
+#restart-btn:hover {
+  background: #0d47a1;
+}
+#show-solution-btn {
+  background: #fbc02d;
+  color: #222;
+}
+#show-solution-btn:hover {
+  background: #f9a825;
+}
+#hint-btn {
+  background: #8e24aa;
+}
+#hint-btn:hover {
+  background: #6a1b9a;
+}
+#start-screen {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 60vh;
+}
+#start-btn{
+  position: relative;
+  font-size: 2rem;
+  padding: 1rem 2rem;
+  background: #2e7d32;
+  color: #fff;
+  border: none;
+  border-radius: 1rem;
+  cursor: pointer;
+  transition: background 0.2s;
+  margin: 0 auto;
+  display: block;
+}
+@font-face {
+  font-family: Solaris;
+  src: url(./Solaris-3\ Script.ttf);
+}
+#stopwatch{
+  text-align: center;
+  padding:5px;
+  background-color: #1976d2;
+  color: white;
+  margin-top: 10px;
+  border-radius: 5px;
+  font-family: Solaris;
+}
+@media (max-width: 600px) {
+  #sudoku-grid {
+    grid-template-columns: repeat(9, 1.5rem);
+    grid-template-rows: repeat(9, 1.5rem);
+  }
+  .sudoku-cell {
+    width: 1.5rem;
+    height: 1.5rem;
+    font-size: 1rem;
+  }
+}
