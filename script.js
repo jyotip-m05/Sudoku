@@ -174,7 +174,7 @@ function endGame(won) {
 // --- Stopwatch ---
 function formatTime(sec) {
   let m = Math.floor(sec / 60), s = sec % 60;
-  return `<span>${m.toString().padStart(2, '0')}</span> : <span>${s.toString().padStart(2, '0')}</span>`;
+  return `<span class="tm" >${m.toString().padStart(2, '0')}</span> : <span class="tm" >${s.toString().padStart(2, '0')}</span>`;
 }
 function startTimer() {
   timer = 0;
